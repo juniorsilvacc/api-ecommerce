@@ -2,13 +2,14 @@ const {Router} = require('express');
 const routes = Router();
 
 const UserController = require('./controllers/UserController');
+const SigninController = require('./controllers/SigninController');
 
 routes.post('/users', UserController.createUser);
-routes.get('/users', UserController.ListUser);
+routes.get('/users', UserController.listUser);
 
-routes.get('/users/:user_id', UserController.IdUser);
+routes.get('/users/:user_id', UserController.idUser);
 
-routes.post('/signin');
+routes.post('/signin', SigninController.create);
 
 routes.post('/products/:user_id');
 routes.get('/products/:user_id');
