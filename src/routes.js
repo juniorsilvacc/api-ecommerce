@@ -3,18 +3,19 @@ const routes = Router();
 
 const UserController = require('./controllers/UserController');
 const SigninController = require('./controllers/SigninController');
+const ProductController = require('./controllers/ProductsController');
 
 routes.post('/users', UserController.createUser);
-routes.get('/users', UserController.listUser);
+routes.get('/users', UserController.getUser);
 
-routes.get('/users/:user_id', UserController.idUser);
+routes.get('/users/:user_id', UserController.byIdUser);
 
 routes.post('/signin', SigninController.create);
 
-routes.post('/products/:user_id');
-routes.get('/products/:user_id');
-routes.patch('/products/:user_id/:products_id');
-routes.delete('/products/:user_id/:products_id');
+routes.post('/products/:user_id', ProductController.createProduct);
+routes.get('/products/:user_id', ProductController.getAllProduct);
+routes.patch('/products/:user_id/:products_id', ProductController.updateProduct);
+routes.delete('/products/:user_id/:products_id', ProductController.deleteProduct);
 
 routes.get('/products/:products_id');
 routes.get('/products');

@@ -25,7 +25,7 @@ module.exports = {
 
   },
 
-  async listUser(req, res) {
+  async getUser(req, res) {
 
     try {
 
@@ -38,9 +38,9 @@ module.exports = {
 
   },
 
-  async idUser(req, res) {
+  async byIdUser(req, res) {
 
-    const {user_id} = req.params
+    const {user_id} = req.params;
 
     try {
 
