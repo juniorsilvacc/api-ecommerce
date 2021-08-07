@@ -14,8 +14,8 @@ routes.post('/signin', SigninController.create);
 
 routes.post('/products/:user_id', ProductController.createProduct);
 routes.get('/products/:user_id', ProductController.getAllProduct);
-routes.patch('/products/:user_id/:products_id', ProductController.updateProduct);
-routes.delete('/products/:user_id/:products_id', ProductController.deleteProduct);
+routes.patch('/products/:products_id', ProductController.updateProduct);
+routes.delete('/products/:products_id', ProductController.deleteProduct);
 
 routes.get('/products/:products_id');
 routes.get('/products');
