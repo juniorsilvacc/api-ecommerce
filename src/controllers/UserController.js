@@ -36,9 +36,9 @@ module.exports = {
       return res.status(400).json({message: 'It was not possible to listed.', error});
     }
 
-  },
+  }, 
 
-  async byIdUser(req, res) {
+  async getUserById(req, res) {
 
     const {user_id} = req.params;
 
