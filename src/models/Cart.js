@@ -9,15 +9,15 @@ const CartSchema = new mongoose.Schema({
   user:{
     type: mongoose.SchemaTypes.ObjectId,
     ref: 'User',
-    required: true
+    required: true,
   },
-  adress: {
+  address: {
     street: {
       type: String,
       required: true,
     },
     number: {
-      type: Number,
+      type: String,
       required: true,
     },
     city: {

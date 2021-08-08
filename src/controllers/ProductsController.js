@@ -4,7 +4,7 @@ const Product = require('../models/Product');
 module.exports = {
   async createProduct (req, res){
 
-    const {productName, productDescription, productPrice, productQuantity, productImage, token} = req.body;
+    const {productName, productDescription, productPrice, productQuantity, productImage} = req.body;
     const {user_id} = req.params;
 
     try {
